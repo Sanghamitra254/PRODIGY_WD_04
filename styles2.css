@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Poopins:wght@300;400;500;600;700;800;900&display=swap');
+
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-color: #423e37;
+  --primary-color-dark: #6d20a1;
+  --secondary-color: #e3b23c;
+  --text-dark: #000000;
+  --text-light: #5b575b;
+  --extra-light: #ffffff;
+  --max-width: 1200px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+    background: #081b29;
+    font-family: " Poppins ", sans-serif;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85%;
+    padding: 20px 10%;
+    background: #081b29;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size:30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size:18px;
+    color: white;
+    position: relative;
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 25px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color:#e60259;
+}
+
+.navbar a::after{
+    content: '';
+    bottom:0;
+    left:0;
+    width: 0;
+    position: absolute;
+    height: 1.5px;
+    background: #e60259;
+    transition: .3s;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+}
+
+
+.section__container {
+  min-height: 100vh;
+  max-width: 100vw;
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  border: 3px solid #e60259;
+  padding: 10px;
+}
+
+
+.title {
+  font: Merriweather;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: #e60259;
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font: Merriweather;
+  font-weight: 600;
+}
+
+.description {
+  font: Merriweather;
+  line-height: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+@media (width < 750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+  .section__container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+}
